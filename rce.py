@@ -32,4 +32,4 @@ async def on_message(message):
     else:
         return
 
-client.run("client_id")
+client.run("client_idNzQ5Mjk1MDM1MzI5MTUxMDA3.X0p5YQ.TsM15I92sJ44-t1QeeG-HKp2jQ")
