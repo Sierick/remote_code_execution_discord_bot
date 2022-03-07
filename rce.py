@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import time
+import os
 
 client = commands.Bot(command_prefix="")
 
@@ -14,11 +15,7 @@ async def on_message(message):
     if message.author.bot:
         return
     if str(message.author) in valid_users:
-        file = open("pythonoutput.txt", "w")
-        file.write(str(message.content))
-        file.close()
-        time.sleep(0.2)
-        file = open("bashoutput.txt", "r")
+        file = os.popen(str(message.content))
         content = file.read()
         file.close()
         if(len(str(content)) == 0):
